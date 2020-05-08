@@ -7,8 +7,7 @@ const ytdl = require("ytdl-core");
 const dotenv = require("dotenv").config();
 
 
-const TOKEN = process.env.BOT_TOKEN;
-const PREFIX = process.env.PREFIX;
+const PREFIX = "!";
 
 var isReady = true;
 
@@ -984,7 +983,7 @@ bot.on('message', (message) => {
     }
 })
 
-bot.login(TOKEN);
+bot.login(process.env.BOT_TOKEN);
 
 
 
