@@ -81,7 +81,7 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
         if (newChannel === rockvoice && oldUserChannel != newChannel) {
             rockvoice.join().then(connection =>
                 {
-                const dispatcher = connection.playFile('./soundboard/mate.mp3');
+                const dispatcher = connection.playFile('http://puskasmate.hu/audio/mate.mp3');
                 dispatcher.on("end", end => {
                     });
                 }).catch(err => console.log(err));
